@@ -42,4 +42,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // some OEMs have restrictions for boot event broadcasts
+    implementation(libs.autostarter)
 }
