@@ -10,6 +10,7 @@ material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 autostarter = "1.1.0"
+room_version = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -21,6 +22,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 autostarter = { group = "com.github.judemanutd", name = "autostarter", version.ref = "autostarter"  }
+room = { group = "androidx.room", name = "room-ktx", version.ref = "room_version"  }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room_version"  }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

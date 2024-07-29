@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    kotlin("kapt") version "2.0.0"
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -45,4 +47,16 @@ dependencies {
 
     // some OEMs have restrictions for boot event broadcasts
     implementation(libs.autostarter)
+
+    implementation(libs.room)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.room.compiler)
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
